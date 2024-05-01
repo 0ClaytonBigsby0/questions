@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Tell Me questions Page 2
+{% endblock %}
+
+{% block content %}
+<a href="{% url 'tell_me' %}">Go to Page 1</a>
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me how you'd switch on the rear for light(s) and explain when you'd use it/them. You don't need to exit the vehicle.<br></b>
+            A: <i>Explain you'd operate the switch (after turning on dipped headlights if necessary) and check if the instrument warning light comes on. Explain when fog lights should be used. </i>
+        </div>
+        <div class="help-question">
+            <b>Why might it cause danger to keep fog lights on in good conditions?<br>
+            What other precautions might you take in conditions of poor visibility?<br>
+            What do these symbols mean? . . .</b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me how you switch your headlight from dipped to main beam and explain how you'd know the main beam is on.<br></b>
+            A: <i>Explain how to operate the switch (ignition or engine on if necessary) and check that the main beam warning light comes on. If safe, you can demostrate as you explain - remember to switch off the headlights when no longer needed.</i>
+        </div>
+        <div class="help-question">
+            <b>When should you use your main beam headlight?<br>
+            What dangers can be cause by incorrect use of main beam headlights?<br>
+            How do 'automatic dim/dip' headlights work?<br>
+            What do these symbols mean? . . .</b>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="content-red">
+            <b>The following 'Tell me' questions require you to open the bonnet. You need to know where the bonnet release catch is and how to operate it. If your car has a bonnet prop, be sure to locate it before making any checks. After making under bonnet checks, take care to stow any prop correctly and close the bonnet securely.</b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Open the bonnet and tell me how you'd check that the engine has sufficient oil.<br></b>
+            A: <i>Open the bonnet and secure it as necessary. Identify dipstick/oil level indicator, describe check of oil level against minimum and maximum markers. Close the bonnet securely before driving.</i>
+        </div>
+        <div class="help-question">
+            <b>Why does the engine need oil?<br>
+            Why must you not overfill the engine oil?</b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Open the bonnet and tell me how you'd check that the engine has sufficient engine coolant.<br></b>
+            A: <i>Open the bonnet and secure it as necessary. Identify high and low level markings on the header tank where fitted or radiator filler cap and describe how to top up to correct level.</i>
+        </div>
+        <div class="help-question">
+            <b>What is engine coolant a mixture of?<br>
+            What dangers do you need to be aware of when checking or topping up the engine coolant?</b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Open the bonnet and tell me how you'd check that you have a safe level of hydraulic brake fluid.<br></b>
+            A: <i>Open the bonnet and secure it as necessary. Identify the brake fluid reservoir and describe how to top up to correct level.</i>
+        </div>
+        <div class="help-question">
+            <b>How would you find out what was the correct brake fluid to use?<br>
+            Why must you be careful not to contaminate the fluid?</b>
+        </div>
+    </div>
+{% endblock content %}

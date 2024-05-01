@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Tell me questions Page 1
+{% endblock %}
+
+{% block content %}
+<a href="{% url 'tell_me2' %}">Go to Page 2</a>
+    <div class="content">
+        <b>'Tell Me' questions are asked at the start of your test, before you start driving.</b> You will be asked to explain how you'd carry out a safety task. These are the questions you may be asked with the minimum required for a correct answer.<br><br>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me how you'd check that the brakes are working before starting a journey.</b><br>
+            A: <i>Explain that, when you push down on the brake pedal, it should not feel spongy or slack. Brakes should be tested as you set off. The vehicle should not pull to one side when you use the brakes.</i>
+        </div>
+        <div class="supplementary-question">
+            <b><i>Supplementary questions to discuss with your trainer.</b></i>
+        </div>
+        <div class="help-question">
+            <b>How should you test the brakes as you set off?<br>
+                What should you do if the brakes don't seem to be working properly?
+            </b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me where you'd find the information for the recommended tyre pressure for this car and how tyre pressure should be checked.</b><br>
+            A: <i>Explain you'd refer to the manufacturer's guide. Use a reliable pressure gauge. Check and adjust pressures when tyres are cold. Don't forget the spare tyre! Remember to refit valve after checking.</i>
+
+        </div>
+        <div class="help-question">
+            <b>Where is tyre pressure information commonly displayed?<br>
+                How does vehicle loading and journey type affect recommended tyre pressures?<br>
+                Why check pressure when tyres are cold?<br>
+                What if you have a 'space-saver' or tyre repair kit instead of a full size spare?
+            </b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me how you make sure your head restrain is correctly adjusted so it provides the best protection in the event of a crash.</b><br>
+            A: <i>Adjust so that the rigid part of the head restrain is at least as high as the eye or top of the ears, and as close to the black of the head is comfortable (you can demonstrate as you explain).</i>
+        </div>
+        <div class="help-question">
+            <b>What is the danger of not adjusting your head restrain correctly?<br>
+            Who should ensure that passenger head restrains are correctly adjusted?<br><br></b>
+            <i>Note: Some restrains might not be adjustable.</i>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me how you'd check the tyres to ensure that they have sufficient tread depth and that their general condition is safe to use on the road.<br></b>
+            A: <i>Explain that tyre should have no cuts or bulges. There should 1.6mm of tread depth across the central three-quarters of the breadth of the tyre, and around the entire outer circumference of the tyre.</i>
+
+        </div>
+        <div class="help-question">
+            <b>Why is it important to have good tyres on your car?<br>
+            How often should you check the condition of your tyres?<br>
+            What can cause uneven tyre wear?<br>
+            How can you check tread depth?<br>
+            What should you do if you notice a defect in one of your tyres?</b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me how you'd check that the headlights and tail lights are working. You don't need to exit the vehicle.<br></b>
+            A: <i>Explaing that you'd operate the switch (after turning on the ignition if necessary), then walk round vehicle to check the lights.</i>
+
+        </div>
+        <div class="help-question">
+            <b>How often should you check that your vehicle lights are working?<br>
+            What should you do if a vehicle sensor indicates a fault with vehicle lights?</b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me how you'd know if there was a problem with your anit-lock braking system (ABS).<br></b>
+            A: <i>Explain that a warning light should illuminate if there is a fault with the anti-lock braking system.</i>
+        </div>
+        <div class="help-question">
+            <b>What is the purpose of ABS?<br>
+            What should you do if a vehicle sensor indicates a fault with vehicle lights?</b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me how you'd check the direction indicators are working. You don't need to exit the vehicle.<br></b>
+            A: <i>Explain that you'd operate the indicator switch (after turning the ignition if necessary) or turn on the hazard warning lights, then walk round the vehicle to check the lights.</i>
+        </div>
+        <div class="help-question">
+            <b>What else might warn you that an indicator had failed?<br>
+            What should you do if an indicator fails whilst you are driving?<br>
+            What to these symbols mean? . . . </b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me how you'd check the brake lights are working on this car.<br></b>
+            A: <i>Explain that you'd operate the breake pedal, make use of reflections in windows or doors, or ask someone to help.</i>
+        </div>
+        <div class="help-question">
+            <b>What is the dange of driving with faulty brake lights?<br>
+            What should you do if brake lights fail during your journey?</b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tellme-question">
+            Q <b>Tell me how you'd check the power-assisted steering is working before starting a journey.<br></b>
+            A: <i>Explain that if the steering becomes heavy, the system may not be working properly. Before starting a journey; maintaining gentle pressure on the steering wheel while the engine is started should result in a slight but noticeable movement as the system beging to operate; alternatively, turning the steering wheel just after moving off will give an immediate indication that the power assistance is functioning.</i>
+        </div>
+        <div class="help-question">
+            <b>Why does the engine need to be running to check the power-assisted steering?<br>
+            What should you do if you realise the power-assisted steering has failed during your journey?</b>
+        </div>
+    </div>
+{% endblock content %}
