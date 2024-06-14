@@ -29,6 +29,7 @@
                     </li>
                     <!-- Add more navbar links as needed -->
                 </ul>
+                <span class="navbar-text ml-auto" id="time-clock"></span>
             </div>
         </div>
     </nav>
@@ -41,5 +42,18 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const formattedTime = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('time-clock').textContent = formattedTime;
+        }
+
+        setInterval(updateTime, 1000); // Update the time every second
+        updateTime(); // Initial call to set the time immediately
+    </script>
 </body>
 </html>
