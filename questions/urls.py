@@ -9,6 +9,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('showme/', include('showme.urls')),  # Include the URLs from the showme app
     path('tellme/', include('tellme.urls')),
+    path('testoverview/', include('testoverview.urls')),
+    path('cardiagram/', include('cardiagram.urls')),
 ]
 
 if settings.DEBUG:

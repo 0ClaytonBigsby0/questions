@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Car Diagram Page
+{% endblock %}
+
+{% block content %}
+<div class="car-diagram-container" style="position: relative;">
+    <img src="{% static 'car_diagram.webp' %}" alt="Car Diagram" usemap="#carMap" style="width: 100%;">
+
+    <!-- Visual Shapes for Development -->
+    <!-- Tire Shapes -->
+    <div class="shape tire" style="left: 190px; top: 360px; width: 100px; height: 100px;"></div>
+    <div class="shape tire" style="left: 650px; top: 360px; width: 100px; height: 100px;"></div>
+    <!-- Headlight Shape -->
+    <div class="shape headlight" style="left: 125px; top: 290px; width: 60px; height: 60px;"></div>
+    <!-- Brake Light Shape -->
+    <div class="shape brakelight" style="left: 770px; top: 280px; width: 60px; height: 60px;"></div>
+
+    <map name="carMap">
+        <!--Tires-->
+        <area shape="rect" coords="140,310,240,410" alt="Front Left Tire" onclick="showInfo('tire')">
+        <area shape="rect" coords="600,310,700,410" alt="Front Right Tire" onclick="showInfo('tire')">
+        <!--Headlights-->
+        <area shape="circle" coords="125,290,30" alt="Headlights" onclick="showInfo('headlights')">
+        <!--Brake Lights-->
+        <area shape="rect" coords="750,260,790,300" alt="Brake Lights" onclick="showInfo('brakelights')">
+    </map>
+</div>
+
+<div id="infoPanel" style="display:none;">
+    <h3 id="infoTitle"></h3>
+    <p id="infoContent"></p>
+</div>
+
+<script>
+    function showInfo(part) {
+        var title, content;
+        switch(part) {
+            case 'tire':
+                title = "Tire Check";
+                content = "Ensure the tire has no cuts or bulges. The tread depth should be at least 1.6mm across the central three-quarters of the tire's breadth.";
+                break;
+            case 'headlights':
+                title = "Headlights Check";
+                content = "Turn on the ignition and operate the switch to check that the headlights are working. Walk around the vehicle to confirm.";
+                break;
+            case 'brakelights':
+                title = "Brake Lights Check";
+                content = "Press the brake pedal and use reflections in windows or doors, or ask someone to help, to check that the brake lights are functioning.";
+                break;
+        }
+        document.getElementById('infoTitle').innerText = title;
+        document.getElementById('infoContent').innerText = content;
+        document.getElementById('infoPanel').style.display = 'block';
+    }
+</script>
+
+<style>
+    /* Style for the visual shapes */
+    .shape {
+        position: absolute;
+        background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red for visibility */
+        border: 1px solid red; /* Red border for visibility */
+        transform: translate(-50%, -50%);
+        pointer-events: none; /* Ensure these shapes do not interfere with clicks */
+    }
+
+    .tire {
+        /* Rectangular shapes for tires */
+        border-radius: 0;
+    }
+
+    .headlight, .brakelight {
+        /* Circular shapes for headlights and brake lights */
+        border-radius: 50%;
+    }
+</style>
+{% endblock content %}
