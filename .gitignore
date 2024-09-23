@@ -50,6 +50,5 @@ staticfiles/
 # Media files uploaded by users
 media/
 
-
 # Local configuration
 local_settings.py
