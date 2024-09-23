@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}
     Show Me questions
 {% endblock %}
 
 {% block content %}
     <a href="{% url 'landing_page' %}">Go back</a>
+
+    <div id="questions-container">
+        <p>Loading questions...</p>
+    </div>
+
     <div class="custom-container">
         <div class="content">
             <b>'Show Me' questions are asked whilst you are driving. </b> These are the questions you may be asked with the minimum
@@ -101,4 +106,6 @@
             </div>
         </div>
     </div>
+
+    <script src="{% static 'scripts.js' %}"></script>
 {% endblock %}

@@ -1,10 +1,25 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
-    Show Me, Tell Me for Car Drives
+    Show Me, Tell Me for Driving Test
 {% endblock %}
 
 {% block content %}
-    <p>Candidates must answer two vehicle safety questions during their driving test. Known as 'show me, tell me' questions, they cover basic maintenance and operation procedures for the vehicle being used. You may be asked to open the bonnet of the car to identify fluid reservoirs and explain how you would check fluid levels. Your trainer will advise you will not be asked to touch a hot engine or physically check fluid levels. Examiners might not ask the questions exactly as stated below and neither are you obliged to answer exactly as described. The most important thing is that the examiner can judge that you understand the risks and know your car.</p>
-    <p><b><i>Wear disposable gloves for under-bonnet checks and a high-visibility vest when making safety checks outside the vehicle on the public highway.</i></b></p>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>What Are 'Show Me, Tell Me' Questions?</h2>
+            <p>Candidates must answer two vehicle safety questions during their driving test, covering basic maintenance and operation procedures for the vehicle being used. You may be asked to open the bonnet to identify fluid reservoirs and explain how you would check fluid levels. Your trainer will advise that you won’t be required to touch a hot engine or physically check fluid levels.</p>
+            <p><strong>Tip:</strong> Wear disposable gloves for under-bonnet checks and a high-visibility vest when making safety checks on the public highway.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'car-illustration.jpg' %}" alt="Car Illustration" class="img-fluid">
+        </div>
+    </div>
+    <hr class="my-4">
+    <div class="text-center">
+        <a href="{% url 'show_me' %}" class="btn btn-outline-primary btn-lg mr-3">Show Me Questions</a>
+        <a href="{% url 'tell_me' %}" class="btn btn-outline-secondary btn-lg">Tell Me Questions</a>
+    </div>
 {% endblock %}

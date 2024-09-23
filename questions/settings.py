@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'tellme',
     'testoverview',
     'cardiagram',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
