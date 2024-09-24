@@ -5,8 +5,10 @@
 {% endblock %}
 
 {% block content %}
-    <a href="{% url 'tell_me' %}">Go to Page 1</a>
     <div class="custom-container">
+        <div class="text-left">
+            <a href="{% url 'tell_me' %}" class="btn btn-outline-primary btn-lg mr-3">Go to Page 1</a>
+        </div>
         <div class="content">
             <div class="tellme-question">
                 Q <b>Tell me how you'd switch on the rear for light(s) and explain when you'd use it/them. You don't need to exit the vehicle.<br></b>

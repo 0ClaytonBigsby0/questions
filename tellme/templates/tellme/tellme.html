@@ -5,8 +5,11 @@
 {% endblock %}
 
 {% block content %}
-    <a href="{% url 'tell_me2' %}">Go to Page 2</a>
+
     <div class="custom-container">
+        <div class="text-right">
+            <a href="{% url 'tell_me2' %}" class="btn btn-outline-primary btn-lg mr-3">Go to Page 2</a>
+        </div>
         <div class="content">
             <b>'Tell Me' questions are asked at the start of your test, before you start driving.</b> You will be asked to explain how you'd carry out a safety task. These are the questions you may be asked with the minimum required for a correct answer.<br><br>
         </div>
