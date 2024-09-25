@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="car-diagram-container" style="position: relative;">
-    <img src="{% static 'car_diagram.webp' %}" alt="Car Diagram" usemap="#carMap" style="width: 100%;">
+    <img src="{% static 'car_diagram.webp' %}" alt="Car Diagram" usemap="#carMap" style="width: 80%;">
 
     <!-- Visual Shapes for Development -->
     <!-- Tire Shapes -->
@@ -50,9 +50,11 @@
                 content = "Press the brake pedal and use reflections in windows or doors, or ask someone to help, to check that the brake lights are functioning.";
                 break;
         }
-        document.getElementById('infoTitle').innerText = title;
-        document.getElementById('infoContent').innerText = content;
-        document.getElementById('infoPanel').style.display = 'block';
+        $('#infoTitle').text(title);
+        $('#infoContent').text(content);
+        
+        // Slide and fade-in the info panel
+        $('#infoPanel').effect("highlight", {}, 500);
     }
 </script>
 

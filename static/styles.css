@@ -5,6 +5,16 @@ body {
   padding: 0;
 }
 
+/* Initially hide the body content */
+body.fade-in {
+opacity: 0;
+transition: opacity 0.6s ease-in;
+}
+
+body.loaded {
+opacity: 1;
+}
+
 .custom-container {
   max-width: 960px;
   padding: 15px;
@@ -116,7 +126,7 @@ body {
 #time-clock {
   font-size: 1.2rem; /* Adjust the font size as desired */
   font-weight: bold; /* Make the font bold */
-  color: #ffffff; /* Set the text color to white */
+  color: black; /* Set the text color to white */
   margin-right: 20px; /* Add some margin to the right to separate from navbar links */
 }
 
@@ -127,4 +137,19 @@ body {
 
 .navbar-nav .nav-link:hover {
   color: #aaaaaa; /* Light gray text color on hover */
+}
+
+.money {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  font-size: 100px;
+  color: black;
+  background: green; 
+  display: none;
+  box-shadow: 2px 2px 2px 2px grey;
+  top: 100px;
+  left: 300px;
+  text-align: center;
+  line-height: 300px;
 }
