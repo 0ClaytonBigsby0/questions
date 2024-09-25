@@ -7,7 +7,11 @@
 {% block content %}
     <a href="{% url 'landing_page' %}" class="btn btn-outline-primary btn-lg mr-3">Go back</a>
 
-    <div id="questions-container" class="text-center">
+    <div id="start-container" class="text-center">
+        <button id="start-quiz-btn" class="btn btn-primary">Start Quiz</button>
+    </div>
+    <br>
+    <div id="questions-container" class="text-center" style="display: none;">
         <p>Loading questions...</p>
     </div>
 

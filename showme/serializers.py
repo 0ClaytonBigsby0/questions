@@ -4,4 +4,4 @@ from .models import ShowMeQuestion
 class ShowMeQuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ShowMeQuestion
-        fields = ['id', 'question', 'answer']
+        fields = ['id', 'question', 'option1', 'option2', 'option3', 'correct_answer']
